@@ -32,19 +32,19 @@ console.log(l);
 console.log(m);
 
 // _____ alert _____
-// alert(a);
-// alert(b);
-// alert(c);
-// alert(d);
-// alert(e);
-// alert(f);
-// alert(g);
-// alert(h);
-// alert(pi);
-// alert(j);
-// alert(k);
-// alert(l);
-// alert(m);
+alert(a);
+alert(b);
+alert(c);
+alert(d);
+alert(e);
+alert(f);
+alert(g);
+alert(h);
+alert(pi);
+alert(j);
+alert(k);
+alert(l);
+alert(m);
 
 // _____ document.write _____
 document.write(a,);
@@ -92,19 +92,19 @@ console.log(l);
 console.log(m);
 
 // _____ alert _____
-// alert(a);
-// alert(b);
-// alert(c);
-// alert(d);
-// alert(e);
-// alert(f);
-// alert(g);
-// alert(h);
-// alert(pi);
-// alert(j);
-// alert(k);
-// alert(l);
-// alert(m);
+alert(a);
+alert(b);
+alert(c);
+alert(d);
+alert(e);
+alert(f);
+alert(g);
+alert(h);
+alert(pi);
+alert(j);
+alert(k);
+alert(l);
+alert(m);
 
 // _____ document.write _____
 document.write(a,);
@@ -133,12 +133,12 @@ console.log(person);
 // 4.- За допомогою 3х різних prompt() отримати 3 слова
 // які являються вашими Імям, По-Батькові та роками.
 
-// let name = prompt('Як тебе звати?', "Ivan");
-// let surename = prompt('Як ти По-Батькові?', "Ivanovich");
-// let age = prompt('Скільки тобі років?', 16);
+let name = prompt('Як тебе звати?', "Ivan");
+let surename = prompt('Як ти По-Батькові?', "Ivanovich");
+let age = prompt('Скільки тобі років?', 16);
 
 //  Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
-// alert(`Вітаю ${name}${surename}. Тобі ${age} років`);
+alert(`Вітаю ${name}${surename}. Тобі ${age} років`);
 
 // 5.- За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
 //     let a = 100; let b = '100'; let c = true;
@@ -175,23 +175,3 @@ document.write(str / 2 + "<br/>");
 
 
 
-
-// ERRORS
-// Ваше завдання, зробити так, щоб файл відкривався без помилок .
-console.log("///////////////////////////////////////////");
-
-let aaa = 100;
-let bbb = 500;
-let ccc = "hello";
-let ddd = "okten";
-const x = 'constant value';
-{
-    console.log(aaa);
-    const x = 'new value';
-
-}
-bbb = 'new value';
-
-let result = 100 + "y";
-
-console.log(result);
