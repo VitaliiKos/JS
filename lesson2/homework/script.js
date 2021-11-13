@@ -52,9 +52,9 @@ if (test !== 'true' ){
 
 let a = +prompt('Введіть змінну a:', '0');
 if (a !==0){
-    document.write('Завдання 4 . Вірно', "<br/>", "<br/>");
+    document.write('Завдання 4. Вірно', "<br/>", "<br/>");
 }else {
-    document.write('Завдання 4 . Невірно', "<br/>", "<br/>");
+    document.write('Завдання 4. Невірно', "<br/>", "<br/>");
 }
 
 // 5. Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані
@@ -109,5 +109,5 @@ let name  = prompt('Яка «офіційна» назва JavaScript?:', 'ECMAS
 if (name === 'ECMAScript' ){
     document.write('Завдання 7. «Правильно!»', "<br/>", "<br/>");
 }else{
-    document.write('Завдання 7. «Не знаєте? ECMAScript!', "<br/>", "<br/>");
+    document.write('Завдання 7. «Не знаєте? ECMAScript!»', "<br/>", "<br/>");
 }
