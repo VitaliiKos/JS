@@ -1,0 +1,72 @@
+html {
+    background-color: silver;
+    width: 70%;
+    margin: 1.5em auto 1.1em;
+}
+.heroes, .products{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.card, .product_card{
+    display: flex;
+    width: 45%;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 5px solid greenyellow;
+    border-radius: 15px;
+    padding: 10px;
+    background: #f6f4b7;
+    align-content: space-between;
+}
+.card h2{
+    width: auto;
+    margin: 0 5px;
+}
+.card h4{
+    width: 100%;
+    margin: 0 5px;
+}
+.card h3{
+    width: auto;
+    margin: auto 10px;
+}
+.card p{
+    margin: auto;
+    width: 100%;
+}
+.hero__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.person_card{
+    width: 70%;
+}
+.hero_title{
+    font-size: 20px;
+    font-style: italic;
+}
+.person_card ul{
+    list-style-type: none;
+}
+.product_image{
+    width: 45%;
+}
+.product_image img{
+    width: 100%;
+}
+.product-title{
+    width: 100%;
+
+}
+.product_card{
+    flex-wrap: nowrap;
+    align-items: flex-start
+}
+.product_info{
+    width: 45%;
+
+}
