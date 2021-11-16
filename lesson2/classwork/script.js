@@ -45,15 +45,15 @@ if (number === 10){
 // якщо в змінну записали щось інше, спрацьовує else
 
 let arr = [46, "str", true, {day: 'one'}, [1,2,'qwerty']];
-for (let x in arr){
-    if (typeof arr[x] === "number"){
-        document.write(`Завдання 4. -1-. Це тип ${typeof arr[x]}.`, "<br/>", "<br/>")
-    }else if (typeof arr[x] === "string"){
-        document.write(`Завдання 4. -2-. Це тип ${typeof arr[x]}.`, "<br/>", "<br/>")
-    }else if (typeof arr[x] === "boolean"){
-        document.write(`Завдання 4. -3-. Це тип ${typeof arr[x]}.`, "<br/>", "<br/>")
-    }else if (typeof arr[x] === "object" || arr[x] === "array"){
-        document.write(`Завдання 4. -4-. Це тип ${typeof arr[x]}.`, "<br/>", "<br/>")
+for (const x of arr) {
+    if (typeof x === "number"){
+        document.write(`Завдання 4. -1-. Це тип ${typeof x}.`, "<br/>", "<br/>")
+    }else if (typeof x === "string"){
+        document.write(`Завдання 4. -2-. Це тип ${typeof x}.`, "<br/>", "<br/>")
+    }else if (typeof x === "boolean"){
+        document.write(`Завдання 4. -3-. Це тип ${typeof x}.`, "<br/>", "<br/>")
+    }else if (typeof x === "object" || arr[x] === "array"){
+        document.write(`Завдання 4. -4-. Це тип ${typeof x}.`, "<br/>", "<br/>")
     }else{
         document.write(`Завдання 4. Невідомий тип ! )) `, "<br/>", "<br/>")
     }
