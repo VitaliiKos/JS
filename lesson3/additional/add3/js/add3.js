@@ -612,11 +612,11 @@ let posts = [
 		body: 'cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut'
 	}
 ];
-document.write('<div class="wrap">')
+document.write('<div class="wrap">');
 	for (const post in posts) {
-		document.write('<div class="post-card">')
-			document.write(`<h3>${posts[post].id}. ${posts[post].title} </h3>`)
-			document.write(`<p> ${posts[post].body} </p>`)
-		document.write('</div>')
+		document.write('<div class="post-card">');
+			document.write(`<h3>${posts[post].id}. ${posts[post].title} </h3>`);
+			document.write(`<p> ${posts[post].body} </p>`);
+		document.write('</div>');
 	}
-document.write('</div>')
+document.write('</div>');

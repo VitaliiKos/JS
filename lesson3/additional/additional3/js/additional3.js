@@ -142,8 +142,9 @@ let arr_task8 = [21, true, '89', 465, 'false', null, NaN, 52];
 let new_arr_task8 = [];
 
 for (const item of arr_task8) {
-    if (typeof item === 'number')
-        new_arr_task8.push(item)
+    if (typeof item === 'number'){
+        new_arr_task8.push(item);
+            }
 }
-document.write(`Завдання 8: ${new_arr_task8}`)
-console.log(`Завдання 8: ${new_arr_task8}`)
+document.write(`Завдання 8: ${new_arr_task8}`);
+console.log(`Завдання 8: ${new_arr_task8}`);
