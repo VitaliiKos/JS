@@ -58,7 +58,7 @@ console.log('************************');
 
 // 2. Вивести за допомогою console.log кожен третій елемен
 console.log('Завдання 2: Вивести за допомогою console.log кожен третій елемен)');
-for (let i = 0; i < empty_arr.length; i+=3) {
+for (let i = 2; i < empty_arr.length; i+=3) {
     document.write(`Завдання 2:  ${empty_arr[i]}`,"<br/>");
     console.log(empty_arr[i]);
 
@@ -68,7 +68,7 @@ console.log('************************');
 
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
 console.log('Завдання 3: Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.)');
-for (let i = 0; i < empty_arr.length; i+=3) {
+for (let i = 2; i < empty_arr.length; i+=3) {
     if (empty_arr[i] % 2 === 0){
         document.write(`Завдання 3:  ${empty_arr[i]}`,"<br/>");
         console.log(empty_arr[i]);
@@ -87,7 +87,7 @@ for (let i = 0; i < empty_arr.length; i+=3) {
         console.log(empty_arr[i]);
     }
 }
-document.write(`Завдання 4: new_empty_arr ${new_empty_arr}`,"<br/>");
+document.write(`Завдання 4: ${new_empty_arr}`,"<br/>");
 document.write(`**************************`,"<br/>");
 console.log('************************');
 

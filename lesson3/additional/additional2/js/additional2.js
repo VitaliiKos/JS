@@ -251,7 +251,7 @@ document.write('<div class="users-box">');
     for (const usersListKey in usersList) {
         document.write('<div class="user-block">');
             document.write(`<h2>${usersList[usersListKey].id}. ${usersList[usersListKey].name}  ${usersList[usersListKey].username} </h2>`);
-            document.write(`<h3> ${usersList[usersListKey].email}  /   ${usersList[usersListKey].phone}.</h3>`);
+            document.write(`<h3> ${usersList[usersListKey].email} / ${usersList[usersListKey].phone}.</h3>`);
             document.write('<div class="address-block">');
                 document.write(`<p>City: ${usersList[usersListKey].address.city} </p>`);
                 document.write(`<p>Street: ${usersList[usersListKey].address.street} </p>`);
