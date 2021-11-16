@@ -142,39 +142,39 @@ empty_mas[9] = [845];
 
 // Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів.
 // Вивести в консоль всі його елементи в циклі
-let i = 0
-for (; i< empty_mas.length; i++){
+
+for (let i = 0; i< empty_mas.length; i++){
     console.log(empty_mas[i]);
 }
 console.log('************************');
 
 document.write(`Завдання 5-2. - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write`,"<br>")
-i = 1
-for (; i<= 10; i++){
+
+for (i = 1; i<= 10; i++){
     console.log(i);
     document.write(i,"<br>");
 }
 console.log('************************');
 
 document.write(`Завдання 5-3. - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write`,"<br>")
-i = 1
-for (; i<= 100; i++){
+
+for (i = 1; i<= 100; i++){
     console.log(i);
     document.write(i,"<br>");
 }
 console.log('************************');
 
 document.write(`Завдання 5-4. - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write`,"<br>")
-i = 1
-for (; i<= 100; i+=2){
+
+for (i = 1; i<= 100; i+=2){
     console.log(i);
     document.write(i,"<br>");
 }
 console.log('************************');
 
 document.write(`Завдання 5-5. - - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write`,"<br>")
-i = 1
-for (; i<= 100; i++){
+
+for (i = 1; i<= 100; i++){
     if (i % 2 === 0) {
         console.log(i);
         document.write(i, "<br>");
@@ -183,8 +183,8 @@ for (; i<= 100; i++){
 console.log('************************');
 
 document.write(`Завдання 5-6. - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write`,"<br>")
-i = 1
-for (; i<= 100; i++){
+
+for (i = 1; i<= 100; i++){
     if (i % 2 !== 0) {
         console.log(i);
         document.write(i, "<br>");
