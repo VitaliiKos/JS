@@ -146,5 +146,111 @@ for (const item of arr_task8) {
         new_arr_task8.push(item);
             }
 }
-document.write(`Завдання 8: ${new_arr_task8}`);
+document.write(`Завдання 8: ${new_arr_task8}`,"<br/>");
 console.log(`Завдання 8: ${new_arr_task8}`);
+document.write(`**************************`,"<br/>");
+console.log('************************');
+
+
+
+// 9. Дано 2 масиви з рівною кількістю об'єктів.
+let usersWithId = [
+    {id: 1, name: 'vasya', age: 31, status: false},
+    {id: 2, name: 'petya', age: 30, status: true},
+    {id: 3, name: 'kolya', age: 29, status: true},
+    {id: 4, name: 'olya', age: 28, status: false}
+];
+
+let citiesWithId = [
+    {user_id: 3, country: 'USA', city: 'Portland'},
+    {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    {user_id: 2, country: 'Poland', city: 'Krakow'},
+    {user_id: 4, country: 'USA', city: 'Miami'}
+];
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+// Записати цей об'єкт в новий масив
+let userInfo = [];
+
+for (const user of usersWithId) {
+    for (const cityInfo of citiesWithId) {
+        if (user.id === cityInfo.user_id){
+            let x = user;
+            x.address = cityInfo;
+            userInfo.push(x);
+        }
+    }
+}
+for (const userInfoElement of userInfo) {
+    document.write(`******* Завдання 9 *****`,"<br/>");
+    for (let key in userInfoElement){
+        if ( key === "address") {
+            for (let k in userInfoElement[key]) {
+                document.write(`${key} ${k}: ${userInfoElement[key][k]}`, "<br/>");
+            }
+        }else {
+            document.write(`${key}: ${userInfoElement[key]}`, "<br/>");
+        }
+    }
+}
+document.write(`**************************`,"<br/>");
+
+
+//10. Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+document.write('Завдання 10. Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.)',"<br/>");
+
+let mas = [51,5,22,58,2121,255,212,25,55,2,];
+for (let i = 0; i < mas.length; i++) {
+    if (mas[i] % 2 === 0){
+        console.log(`Завдання 10. ${mas[i]}`);
+        document.write(`Завдання 10. ${mas[i]}`,"<br/>");
+    }
+}
+document.write(`**************************`,"<br/>");
+
+// 11.Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
+document.write('Завдання 11.Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. ' +
+    'За допомогою будь-якого циклу скопіювати значення одного масиву в інший.)',"<br/>");
+mas = [51,5,22,58,2121,255,212,25,55,2,];
+let new_mas = [];
+for (let i = 0; i < mas.length; i++) {
+    new_mas.push(mas[i]);
+}
+console.log(`Завдання 11 ${new_mas}`);
+document.write(`Завдання 11 ${new_mas}`,"<br/>");
+document.write(`**************************`,"<br/>");
+
+//12. Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+document.write('12. Дано масив: [ \'a\', \'b\', \'c\'] . За допомогою циклу for зібрати всі букви в слово. ',"<br/>")
+let masLit = [ 'a', 'b', 'c'];
+let res = ''
+for (let i = 0; i < masLit.length; i++) {
+    res += masLit[i];
+}
+document.write(`Завдання 12. ${res}`,"<br/>")
+console.log(`Завдання 12. ${res}`)
+document.write(`**************************`,"<br/>");
+
+//13.  Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+document.write('Завдання 13.  Дано масив: [ \'a\', \'b\', \'c\'] . За допомогою циклу while зібрати всі букви в слово.',"<br/>")
+ masLit  = [ 'a', 'b', 'c'];
+ res = '';
+ i = 0
+ while (i< masLit.length){
+    res += masLit[i]
+     i++
+ }
+document.write(`Завдання 13. ${res}`,"<br/>")
+console.log(`Завдання 13. ${res}`)
+document.write(`**************************`,"<br/>");
+
+
+// 14. Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+document.write('Завдання 14.  Дано масив: [ \'a\', \'b\', \'c\'] . За допомогою циклу for of зібрати всі букви в слово.',"<br/>")
+masLit  = [ 'a', 'b', 'c'];
+res = '';
+for (const re of masLit) {
+    res += re;
+}
+document.write(`Завдання 14. ${res}`,"<br/>")
+console.log(`Завдання 14. ${res}`)
+document.write(`**************************`,"<br/>");
