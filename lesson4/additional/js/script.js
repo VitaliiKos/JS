@@ -21,7 +21,7 @@ function check(a,b){
     if (b === undefined ){
         return (`Заданно тільки а: ${a}`);
     }else {
-    return (`Заданно а i b: ${a}`);
+    return (`Заданно а i b: ${a+b}`);
     }
 }
 let checkArrArrResult = check(468, 26);
