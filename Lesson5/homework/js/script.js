@@ -73,7 +73,8 @@ document.write('Завдання 7. створити функцію яка  ст
     'Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)','<br/>');
 let forUlLi = (n) => {
     document.write(`<ul>`);
-        for (let i = 0; i < n; i++) document.write(`<li>Text</li>`);
+        for (let i = 0; i < n; i++)
+            document.write(`<li>Text</li>`);
     document.write(`</ul>`);
 }
 forUlLi(3);
@@ -83,7 +84,8 @@ document.write('******************', '<br/>');
 document.write('Завдання 8. створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список','<br/>');
 let masForUlLi = (n) => {
     document.write(`<ol>`);
-    for (let i = 0; i < n.length; i++) document.write(`<li>${n[i]}</li>`);
+    for (let i = 0; i < n.length; i++)
+        document.write(`<li>${n[i]}</li>`);
     document.write(`</ol>`);
 }
 liText = ['Lorem', 2, '13', true, 'false', 56984315];

@@ -39,8 +39,9 @@ document.write(' Завдання 3. створити функцію яка по
 
 let maxArrValue = (a) => {
     let maxValue = a[0];
-    for (let i = 1; i < a.length; i++) maxValue = (maxValue < a[i]) ? a[i] : maxValue;
-
+    for (let i = 1; i < a.length; i++) {
+        maxValue = (maxValue < a[i]) ? a[i] : maxValue;
+    }
     return maxValue;
 };
 arr = [255, 449, 115, 58, 525, 44];
@@ -55,7 +56,9 @@ document.write(' Завдання 4. створити функцію яка по
 
 let minArrValue = (a) => {
     let minValue = a[0];
-    for (let i = 1; i < a.length; i++) minValue = (minValue > a[i]) ? a[i] : minValue;
+    for (let i = 1; i < a.length; i++) {
+        minValue = (minValue > a[i]) ? a[i] : minValue;
+    }
     return minValue;
 }
 arr = [255, 449, 115, 58, 525, 44];
@@ -70,7 +73,9 @@ document.write(' Завдання 5. створити функцію яка пр
 
 let sumArrValue = (a) => {
     let sumValue = 0;
-    for (let i = 0; i < a.length; i++) sumValue += a[i];
+    for (let i = 0; i < a.length; i++) {
+        sumValue += a[i];
+    }
     return sumValue;
 }
 arr = [255, 449, 115, 58, 525, 44];
@@ -85,7 +90,9 @@ document.write(' Завдання 6. створити функцію яка пр
 
 let sumAvgArrValue = (a) => {
     let sumAvgValue = 0;
-    for (let i = 0; i < a.length; i++) sumAvgValue += a[i];
+    for (let i = 0; i < a.length; i++) {
+        sumAvgValue += a[i];
+    }
     return sumAvgValue / a.length;
 }
 arr = [255, 449, 115, 58, 525, 44];
@@ -121,7 +128,9 @@ document.write('Завдання 8. створити функцію яка за�
     'діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.', '<br/>');
 let newRandomArr = [];
 let randomArr = (size) => {
-    for (let i = 0; i < size; i++) newRandomArr[newRandomArr.length] = (Math.round(Math.random() * 100));
+    for (let i = 0; i < size; i++) {
+        newRandomArr[newRandomArr.length] = (Math.round(Math.random() * 100));
+    }
     return newRandomArr;
 }
 
@@ -136,7 +145,9 @@ document.write('Завдання 9. створити функцію яка за�
     'limit - аргумент, який характеризує кінцеве значення діапазону.', '<br/>');
 let randomLimitArr = (size, limit) => {
     let newRandomArr = [];
-    for (let i = 0; i < size; i++) newRandomArr[newRandomArr.length] = (Math.round(Math.random() * limit));
+    for (let i = 0; i < size; i++) {
+        newRandomArr[newRandomArr.length] = (Math.round(Math.random() * limit));
+    }
     return newRandomArr;
 }
 
@@ -150,7 +161,9 @@ document.write('*************', "<br/>");
 document.write('Завдання 10. Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].', '<br/>');
 let newReverseArr = [];
 let reversArr = (a) => {
-    for (let i = a.length - 1; i >= 0; i--) newReverseArr[newReverseArr.length] = a[i];
+    for (let i = a.length - 1; i >= 0; i--) {
+        newReverseArr[newReverseArr.length] = a[i];
+    }
     return newReverseArr;
 }
 arr = [255, 449, 115, 58, 525, 44];
