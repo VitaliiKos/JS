@@ -95,5 +95,4 @@ moveZeroItemToEndArr([1,0,6,0,3]);
 moveZeroItemToEndArr([0,1,2,3,4]);
 moveZeroItemToEndArr([0,0,1,0]);
 document.write('******************', '<br/>' );
-console.log('******************' +
-    '***');
+console.log('*********************');
