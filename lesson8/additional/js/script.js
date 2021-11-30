@@ -3,16 +3,17 @@
 
 let arrClass = []
 function searchClass(startElement) {
-    if (startElement.children.length) {
-        for (const element of startElement.children) {
-            searchClass(element);
-        }
-    }
     if(startElement.className) {
         for (const classElement of startElement.className.split(' ')) {
             if (!arrClass.includes(classElement)) {
                 arrClass.push(classElement)
             }
+        }
+    }
+
+    if (startElement.children.length) {
+        for (const element of startElement.children) {
+            searchClass(element);
         }
     }
 
