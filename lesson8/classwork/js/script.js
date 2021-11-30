@@ -66,8 +66,11 @@ for (const elem of subHeaderTextColor) {
 
 //     k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
 let textClass = document.getElementsByClassName('content_1');
+console.log(textClass)
 for (const text of textClass) {
-    text.innerHTML = `<p>${prompt("Введіть текст: ", 'Lorem lorem Lorem')}</p>`;
+    for (const pText of text.children) {
+        pText.innerText = `${prompt("Введіть текст: ", 'Lorem lorem Lorem')}`
+    }
 }
 //     l) отримати елементи p та змінити їм padding на 20px
 let paddingP = document.querySelectorAll('p');
