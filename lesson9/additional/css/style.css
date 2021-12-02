@@ -1,0 +1,51 @@
+.wrap{
+    display: flex;
+    column-gap: 5px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    margin: 5px;
+    /*border: 2px solid red;*/
+}
+.cardElement{
+    display: flex;
+    border: 2px solid maroon;
+    flex-wrap: wrap;
+    background: #c4dcc4;
+    border-radius: 15px;
+    padding: 10px;
+}
+.addressElement{
+    display: flex;
+    row-gap: 5px;
+    column-gap: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-top: 2px solid darkgreen;
+}
+.idElement,
+.nameElement,
+.usernameElement,
+.emailElement,
+.phoneElement,
+.websiteElement,
+.addressElement, .cityElement, .suiteElement, .zipcodeElement,
+.companyElement,.bsElement,.catchPhraseElement,.companyNameElement{
+    width: 80%;
+    /*border-bottom: 2px solid darkgreen;*/
+
+}
+.geoElement{
+    width: 100%;
+    border-top: 2px solid darkgreen;
+    border-bottom: 2px solid darkgreen;
+}
+.latElement,.lngElement{
+    width: 100%;
+}
+.companyElement{
+    border-top: 2px solid darkgreen;
+}
+.bsElement,.catchPhraseElement,.companyNameElement,.cityElement,
+.streetElement,.suiteElement,.zipcodeElement,.latElement,.lngElement {
+    padding-left: 20px;
+}

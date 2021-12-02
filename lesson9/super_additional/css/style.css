@@ -1,0 +1,14 @@
+.userInfo{
+    display: flex;
+    flex-wrap: wrap;
+    background: #B0E0E6;
+    border: 2px solid maroon;
+    margin: 5px;
+    padding: 10px;
+}
+.userName,.userAge,.userStatus,.userAddress{
+    width: 100%;
+}
+.userCity,.userCountry,.userStreet,.userHouseNumber{
+    padding-left: 10px;
+}
