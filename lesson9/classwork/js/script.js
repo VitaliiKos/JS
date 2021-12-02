@@ -173,8 +173,5 @@ for (const coursesItem of coursesArray) {
         divModule.appendChild(liModule);
     }
     document.body.appendChild(subject);
-    subject.appendChild(divTitle);
-    subject.appendChild(divMoth);
-    subject.appendChild(divHour);
-    subject.appendChild(divModule);
+    subject.append(divTitle, divMoth, divHour, divModule);
 }
