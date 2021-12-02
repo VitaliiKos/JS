@@ -1,0 +1,30 @@
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 5px;
+    border: 2px solid red;
+    padding: 10px;
+    margin: 5px;
+
+}
+.title {
+    padding: 5px;
+    width: 100%;
+    border: 2px solid darkgreen;
+}
+.month {
+    padding: 5px;
+    border: 2px solid darkgreen;
+    flex-grow: 3;
+}
+.hour {
+    padding: 5px;
+    border: 2px solid darkgreen;
+    flex-grow: 5;
+}
+.module {
+    padding: 10px;
+    border: 2px solid darkgreen;
+    width: 100%;
+}
