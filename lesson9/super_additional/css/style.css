@@ -6,9 +6,16 @@
     margin: 5px;
     padding: 10px;
 }
-.userName,.userAge,.userStatus,.userAddress{
+/*.userName,.userAge,.userStatus,.userAddress{*/
+/*    width: 100%;*/
+/*}*/
+/*.userCity,.userCountry,.userStreet,.userHouseNumber{*/
+/*    padding-left: 10px;*/
+/*}*/
+
+.nameUser,.ageUser,.statusUser,.addressUser{
     width: 100%;
 }
-.userCity,.userCountry,.userStreet,.userHouseNumber{
+.cityUser,.countryUser,.streetUser,.houseNumberUser{
     padding-left: 10px;
 }

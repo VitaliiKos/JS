@@ -4,9 +4,8 @@
     row-gap: 5px;
     flex-wrap: wrap;
     margin: 5px;
-    /*border: 2px solid red;*/
 }
-.cardElement{
+.userInfo{
     display: flex;
     border: 2px solid maroon;
     flex-wrap: wrap;
@@ -14,7 +13,8 @@
     border-radius: 15px;
     padding: 10px;
 }
-.addressElement{
+/*.addressElement{*/
+.addressUser{
     display: flex;
     row-gap: 5px;
     column-gap: 5px;
@@ -22,30 +22,30 @@
     flex-wrap: nowrap;
     border-top: 2px solid darkgreen;
 }
-.idElement,
-.nameElement,
-.usernameElement,
-.emailElement,
-.phoneElement,
-.websiteElement,
-.addressElement, .cityElement, .suiteElement, .zipcodeElement,
-.companyElement,.bsElement,.catchPhraseElement,.companyNameElement{
+.idUser,
+.nameUser,
+.usernameUser,
+.emailUser,
+.phoneUser,
+.websiteUser,
+.addressUser, .cityUser, .suiteUser, .zipcodeUser,
+.companyUser,.bsUser,.catchPhraseUser,.companyUser{
     width: 80%;
     /*border-bottom: 2px solid darkgreen;*/
 
 }
-.geoElement{
+.geoUser{
     width: 100%;
     border-top: 2px solid darkgreen;
     border-bottom: 2px solid darkgreen;
 }
-.latElement,.lngElement{
+.latUser,.lngUser{
     width: 100%;
 }
-.companyElement{
+.companyUser{
     border-top: 2px solid darkgreen;
 }
-.bsElement,.catchPhraseElement,.companyNameElement,.cityElement,
-.streetElement,.suiteElement,.zipcodeElement,.latElement,.lngElement {
+.bsUser,.catchPhraseUser,.nameUser,.cityUser,
+.streetUser,.suiteUser,.zipcodeUser,.latUser,.lngUser {
     padding-left: 20px;
 }

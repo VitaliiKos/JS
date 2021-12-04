@@ -236,83 +236,44 @@ let usersList = [
     ];
 let divElement = document.createElement("div");
 divElement.classList.add('wrap');
+document.body.appendChild(divElement);
 
-for (const itemProperty of usersList) {
-    let itemKey = Object.keys(itemProperty);
-    let itemAddressKey = Object.keys(itemProperty.address);
-    let itemCompanyKey = Object.keys(itemProperty.company);
-    let itemGeoKey = Object.keys(itemProperty.address.geo);
-    let cardElement =document.createElement('div')
-    cardElement.classList.add('cardElement')
 
-    let idElement =document.createElement('div');
-        idElement.classList.add('idElement');
-        idElement.innerText = itemKey[0]+" : "+ itemProperty.id;
-    let nameElement =document.createElement('div');
-        nameElement.classList.add('nameElement');
-        nameElement.innerText = itemKey[1]+" : "+itemProperty.name;
-    let usernameElement =document.createElement('div');
-        usernameElement.classList.add('usernameElement');
-    usernameElement.innerText = itemKey[2] + " : " + itemProperty.username;
-    let emailElement = document.createElement('div');
-        emailElement.classList.add('emailElement');
-        emailElement.innerText = itemKey[3] + " : " +  itemProperty.email;
-    let phoneElement =document.createElement('div');
-        phoneElement.classList.add('phoneElement');
-        phoneElement.innerText = itemKey[5] + " : " + itemProperty.phone;
-    let websiteElement =document.createElement('div');
-        websiteElement.classList.add('websiteElement');
-        websiteElement.innerText = itemKey[6] + " : " +  itemProperty.website;
-    let companyElement =document.createElement('div')
-        companyElement.classList.add('companyElement')
-        companyElement.innerText = itemKey[7] + " : "
-    let addressElement =document.createElement('div')
-        addressElement.classList.add('addressElement')
-        addressElement.innerText = itemKey[4] + " : "
+for (const user of usersList) {
+    let userInfo = document.createElement("div");
+    userInfo.classList.add('userInfo');
+    document.body.appendChild(userInfo);
+    let itemKey = Object.keys(user);
+    for (let i = 0; i < itemKey.length; i++) {
+        let itemKeyElement = itemKey[i];
+        itemKeyElement = document.createElement("div");
+        itemKeyElement.classList.add(`${itemKey[i]}User`);
+        if (typeof user[itemKey[i]] === 'object'){
+            itemKeyElement.innerText = itemKey[i] + " : ";
+            let itemAddressKey = Object.keys(user[itemKey[i]]);
+            for (let j = 0; j < itemAddressKey.length; j++) {
+                let KeyElement = itemAddressKey[j];
+                KeyElement = document.createElement("div");
+                KeyElement.classList.add(`${itemAddressKey[j]}User`);
+                let addressUser = itemKey[i];
+                let addressItems =itemAddressKey[j];
+                let geoLocationsObj = user[addressUser][addressItems];
+                if (typeof geoLocationsObj === "object"){
 
-    let cityElement = document.createElement("div")
-        cityElement.classList.add('cityElement')
-        cityElement.innerText = itemAddressKey[2] + " : " +  itemProperty.address.city
-    let streetElement = document.createElement("div")
-        streetElement.classList.add('streetElement')
-        streetElement.innerText =itemAddressKey[0] + " : " +   itemProperty.address.street
-    let suiteElement = document.createElement("div")
-        suiteElement.classList.add('suiteElement')
-        suiteElement.innerText = itemAddressKey[1] + " : " +  itemProperty.address.suite
-    let zipcodeElement = document.createElement("div")
-        zipcodeElement.classList.add('zipcodeElement')
-        zipcodeElement.innerText = itemAddressKey[3] + " : " +  itemProperty.address.zipcode
-    let geoElement = document.createElement("div")
-        geoElement.classList.add('geoElement')
-        geoElement.innerText = itemAddressKey[4] + " : "
-
-    let latElement = document.createElement("div")
-        latElement.classList.add('latElement')
-        latElement.innerText = itemGeoKey[0] + " : " + itemProperty.address.geo.lat
-    let lngElement = document.createElement("div")
-        lngElement.classList.add('lngElement')
-        lngElement.innerText = itemGeoKey[1] + " : " + itemProperty.address.geo.lng
-
-    let bsElement = document.createElement("div")
-        bsElement.classList.add('bsElement')
-        bsElement.innerText = itemCompanyKey[2] + " : " + itemProperty.company.bs
-    let catchPhraseElement = document.createElement("div")
-        catchPhraseElement.classList.add('catchPhraseElement')
-        catchPhraseElement.innerText = itemCompanyKey[1] + " : " + itemProperty.company.catchPhrase
-    let companyNameElement = document.createElement("div")
-        companyNameElement.classList.add('companyNameElement')
-        companyNameElement.innerText = itemCompanyKey[0] + " : " + itemProperty.company.name
-
-    document.body.appendChild(divElement)
-    divElement.appendChild(cardElement)
-
-    cardElement.append(idElement,nameElement,usernameElement,emailElement,addressElement,
-        phoneElement,websiteElement,websiteElement,companyElement)
-
-    addressElement.append(streetElement,suiteElement,cityElement,zipcodeElement,geoElement)
-
-    geoElement.append(latElement, lngElement)
-
-    companyElement.append(companyNameElement ,catchPhraseElement, bsElement)
+                        KeyElement.innerText = itemAddressKey[j] + ' : ';
+                    for (const geo in geoLocationsObj) {
+                        let local = document.createElement('div');
+                            local.classList.add(`${geo}User`);
+                            local.innerText = geo + ' : ' + geoLocationsObj[geo];
+                            KeyElement.append(local);
+                    }
+                }else{
+                    KeyElement.innerText = itemAddressKey[j] + ' : ' + itemAddressKey[j];
+                    KeyElement.innerText = itemAddressKey[j] + " : " + user[addressUser][addressItems];
+                }
+                itemKeyElement.append(KeyElement);
+            }
+        }else {itemKeyElement.innerText = itemKey[i] + " : " + user[itemKey[i]];}
+        userInfo.append(itemKeyElement);
+    }
 }
-

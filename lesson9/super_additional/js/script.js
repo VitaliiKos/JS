@@ -67,52 +67,39 @@ let newArrAddress = [];
 
 users.forEach(user=>{
     newArrAddress.push(user);
-    let oneblok = document.createElement("div");
-    oneblok.innerText = `${user.name}, ${user.age}, ${user.status}, ${user.address.city}, ${user.address.country},
+    let oneBlock = document.createElement("div");
+    oneBlock.innerText = `${user.name}, ${user.age}, ${user.status}, ${user.address.city}, ${user.address.country},
         ${user.address.street}, ${user.address.houseNumber}`;
-    document.body.appendChild(oneblok);
+    document.body.appendChild(oneBlock);
 
 })
 console.log(newArrAddress);
 
 // **************************************
 for (const user of users) {
-
-    let itemKey = Object.keys(user);
-    let itemAddressKey = Object.keys(user.address);
-
     let userInfo = document.createElement("div");
         userInfo.classList.add('userInfo');
-    let userName = document.createElement("div");
-        userName.classList.add('userName');
-        userName.innerText = itemKey[0] + " : " + user.name;
-    let userAge = document.createElement("div");
-        userAge.classList.add('userAge');
-        userAge.innerText = itemKey[1]+" : "+ user.age;
-    let userStatus = document.createElement("div");
-        userStatus.classList.add('userStatus');
-        userStatus.innerText = itemKey[2] + " : " + user.status;
-    let userAddress = document.createElement("div");
-        userAddress.classList.add('userAddress');
-        userAddress.innerText = itemKey[3] + " : ";
-
-
-    let userCity = document.createElement("div");
-        userCity.classList.add('userCity');
-        userCity.innerText = itemAddressKey[0] + " : " + user.address.city;
-    let userCountry =document.createElement("div");
-        userCountry.classList.add('userCountry');
-        userCountry.innerText = itemAddressKey[1] + " : " + user.address.country;
-    let userStreet =document.createElement("div");
-        userStreet.classList.add('userStreet');
-        userStreet.innerText = itemAddressKey[2] + " : " + user.address.street;
-    let userHouseNumber = document.createElement("div");
-        userHouseNumber.classList.add('userHouseNumber');
-        userHouseNumber.innerText = itemAddressKey[3] + " : " + user.address.houseNumber;
-
-    document.body.appendChild(userInfo);
-    userInfo.append(userName,userAge,userStatus,userAddress);
-    userAddress.append(userCity,userCountry,userStreet,userHouseNumber);
+        document.body.appendChild(userInfo);
+    let itemKey = Object.keys(user);
+    for (let i = 0; i < itemKey.length; i++) {
+        let itemKeyElement = itemKey[i];
+        itemKeyElement = document.createElement("div")
+        itemKeyElement.classList.add(`${itemKey[i]}User`);
+        if (typeof user[itemKey[i]] === 'object'){
+            itemKeyElement.innerText = itemKey[i] + " : "
+            let itemAddressKey = Object.keys(user[itemKey[i]]);
+            for (let j = 0; j < itemAddressKey.length; j++) {
+                let KeyElement = itemAddressKey[j];
+                KeyElement = document.createElement("div")
+                KeyElement.classList.add(`${itemAddressKey[i]}User`);
+                let addressUser = itemKey[i]
+                let addressItems =itemAddressKey[j]
+                KeyElement.innerText = itemAddressKey[j] + " : " + user[addressUser][addressItems];
+                itemKeyElement.append(KeyElement);
+            }
+        }else {itemKeyElement.innerText = itemKey[i] + " : " + user[itemKey[i]];}
+        userInfo.append(itemKeyElement);
+    }
 }
 
 // 2. є сторінка rules.html. Контентом сторінки є заголовки та параграфи.
