@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 10 Additional 4-5</title>
+</head>
+<body>
+
+<h3>Завдання 5.  Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.</h3>
+<div id="carousel" class="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+        <ul class="images">
+            <li><img src="../additional_4_5/1.jpg" alt="1"></li>
+            <li><img src="../additional_4_5/2.jpg" alt="2"></li>
+            <li><img src="../additional_4_5/3.jpg" alt="3"></li>
+            <li><img src="../additional_4_5/4.jpg" alt="4"></li>
+            <li><img src="../additional_4_5/5.jpg" alt="5"></li>
+            <li><img src="../additional_4_5/6.jpg" alt="6"></li>
+            <li><img src="../additional_4_5/7.jpg" alt="7"></li>
+            <li><img src="../additional_4_5/8.jpg" alt="8"></li>
+            <li><img src="../additional_4_5/9.jpg" alt="9"></li>
+            <li><img src="../additional_4_5/10.jpg" alt="10"></li>
+        </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+</div>
+<hr>
+<div>
+    <h3>Завдання 4</h3>
+    <p>
+       (Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает
+                 в боди 2 кнопки (назад/вперед) при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии
+                 на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)  НО если у
+                 (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и
+                 выводит первого ребенка. и тд. Когда все дети заканчиваются, мы выходим из данного дочернего элемента
+                 и переходим к следующему, лежащему с ним на одном уровне
+
+    </p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

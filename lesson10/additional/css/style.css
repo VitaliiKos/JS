@@ -1,0 +1,29 @@
+.popup {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    left: 10%;
+    top: 200px;
+}
+.popup .popuptext {
+    visibility: hidden;
+    width: 80%;
+    background-color: #7d8b7c;
+    color: #5ce20e;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 8px;
+    position: absolute;
+    z-index: 1;
+}
+
+.popup .show {
+    visibility: visible;
+}
+
+.change_text,.info{
+    border: 3px solid cornflowerblue;
+    padding: 10px;
+    background: #e89717;
+}
+
