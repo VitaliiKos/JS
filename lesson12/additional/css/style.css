@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.userList{
+    flex-grow: 5;
+}
+.wrapPost, .userComment{
+    flex-grow: 3;
+}
+.wrapPost{
+    column-gap: 5px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.userComment div{
+    border: 2px solid #820729;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.post{
+    border: 2px solid cornflowerblue;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.userInfo{
+    display: flex;
+    border: 2px solid maroon;
+    flex-wrap: wrap;
+    background: #efdae4;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    color: #820729;
+}
+.addressUser{
+    display: flex;
+    row-gap: 5px;
+    column-gap: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-top: 2px solid darkgreen;
+}
+.idUser,
+.nameUser,
+.usernameUser,
+.emailUser,
+.phoneUser,
+.websiteUser,
+.addressUser, .cityUser, .suiteUser, .zipcodeUser,
+.companyUser,.bsUser,.catchPhraseUser,.companyUser{
+    width: 80%;
+}
+.geoUser{
+    width: 100%;
+    border-top: 2px solid darkgreen;
+    border-bottom: 2px solid darkgreen;
+}
+.latUser,.lngUser{
+    width: 100%;
+}
+.companyUser{
+    border-top: 2px solid darkgreen;
+}
+.bsUser,.catchPhraseUser,.nameUser,.cityUser,
+.streetUser,.suiteUser,.zipcodeUser,.latUser,.lngUser {
+    padding-left: 20px;
+}
+.user_btn{
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 5px;
+    background: #76ee4e;
+    color: #820729;
+}
