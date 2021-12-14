@@ -1,0 +1,39 @@
+.description{
+    border: 2px solid #820729;
+    background: #f1b56a;
+    padding: 10px;
+    margin: 10px;
+}
+
+#productName,
+#productQuantity,
+#productPrice,
+#productImage{
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+}
+#productAdd{
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #5ce20e;
+}
+#productForm {
+    border: 2px solid #7d8b7c;
+    margin: 10px;
+    background: #CCCCCC;
+
+}
+.productList{
+    padding: 5px 15px;
+    margin: 10px;
+    background: #B0E0E6;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+
+}
