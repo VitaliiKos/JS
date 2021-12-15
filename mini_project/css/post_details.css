@@ -1,0 +1,40 @@
+.postCard{
+    display: flex;
+    border: 2px solid #820729;
+    margin: 5px;
+    background: #bee7c1;
+}
+.post_li{
+    list-style-type: none;
+}
+.post_li h4{
+    margin: 5px;
+}
+.post_li h4 em{
+    font-weight: normal;
+}
+.comments_block{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2px;
+    row-gap: 5px;
+    margin: 5px;
+    justify-content: space-between;
+}
+.comment_card{
+    border: 2px solid #820729;
+    width: 24%;
+    background: #f3f3f3;
+}
+.card_ul{
+    padding: 0 10px;
+}
+.card_li{
+    list-style-type: none;
+}
+.card_li h4 em{
+    font-weight: normal;
+}
+.card_li h4 {
+    font-size: 16px;
+}

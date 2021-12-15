@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.userCard{
+    border: 3px solid #820729;
+    padding: 10px;
+    background: #c7eff1;
+    width: 40%;
+}
+.userDetail {
+    background-color: #f3ecaa;
+    color: black;
+    border: 2px solid #542a07;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+.userDetail:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.userDetail a{
+    text-decoration: none;
+}
