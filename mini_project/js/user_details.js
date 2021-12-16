@@ -45,6 +45,7 @@ postBtn.addEventListener('mousedown', function (event) {
         .then(response =>response.json())
         .then(posts => {
              let postList = document.createElement("ol");
+             postList.classList.add('postList')
             document.body.appendChild(postList);
             for (const post of posts) {
                 let postTitle = document.createElement("li");
@@ -52,10 +53,11 @@ postBtn.addEventListener('mousedown', function (event) {
                 postTitle.innerHTML = `<h4>${post.title}</h4>`;
                 postList.appendChild(postTitle);
                 let btnBlock = document.createElement("div");
+                btnBlock.classList.add('btn_block')
                 let liBtn = document.createElement("button");
                 liBtn.classList.add('post_detail_btn');
                 liBtn.id = `postID${post.id}`;
-                liBtn.innerText = 'Post detail >>';
+                liBtn.innerText = 'Post detail';
                 postTitle.appendChild(btnBlock);
                 btnBlock.appendChild(liBtn);
                 liBtn.addEventListener('mousedown', function (event) {
