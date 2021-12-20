@@ -1,8 +1,6 @@
 //f1
-function prepareCoffee(myVariables) {
-    return new Promise((resolve,reject ) =>{
+function prepareCoffee(myVariables, callback) {
         setTimeout(()=>{
-
             if (!myVariables.dayOff){
                 if (myVariables.myTime < 380){
                     myVariables.myTime += 30;
@@ -12,31 +10,28 @@ function prepareCoffee(myVariables) {
                     myVariables.mood -= 5;
                     document.write(`${Math.floor(myVariables.myTime/60)}: ${myVariables.myTime%60} - Проспав :((( . На роботі попю каву з колегами`, '<br/>');
                 }
-                resolve(myVariables);
+                callback(null, myVariables);
+            }else {
+                callback('Та ну його...Сьогодні вихідний...  Виключаю телефон і лягаю спати....Хрррр', null);
             }
-            reject('Та ну його...Сьогодні вихідний...  Виключаю телефон і лягаю спати....Хрррр');
         },1000);
-    })
 }
 //f2
-function dressUp(myVariables) {
-    return new Promise((resolve) =>{
+function dressUp(myVariables, callback) {
         setTimeout(()=>{
             myVariables.myTime += 10;
             if (myVariables.morning === 'дощ'){
                 myVariables.mood -= 15;
-                document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Сьогодні ${myVariables.morning}. Це Львів "Дєтка" - привикай до дощової погоди. Не забудь парасолю`, '<br/>');
+                document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Сьогодні ${myVariables.morning}.Це Львів "Дєтка" - привикай до дощової погоди. Не забудь парасолю`, '<br/>');
             }else {
                 myVariables.mood += 10;
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Сьогодні ${myVariables.morning}. Погода "апупена". Можна скоротити дорогу і пройтись через парк`, '<br/>');
             }
-            resolve( myVariables);
+            callback(null, myVariables);
         },200);
-    })
 }
 //f3
-function waitForTrolleyBuss(myVariables) {
-    return new Promise((resolve) =>{
+function waitForTrolleyBuss(myVariables, callback) {
         setTimeout(()=>{
             myVariables.myTime += 20;
             if (myVariables.checkOnApp){
@@ -47,13 +42,11 @@ function waitForTrolleyBuss(myVariables) {
                 myVariables.mood += 10;
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Тролейбус ще далеко... піду на іншу зупинку, може автобус приїде швидше`, '<br/>');
             }
-            resolve( myVariables);
+            callback(null, myVariables);
         },1200);
-    })
 }
 //f4
-function roadCheckPoint2(myVariables) {
-    return new Promise((resolve) =>{
+function roadCheckPoint2(myVariables, callback) {
         setTimeout(()=>{
             myVariables.myTime += 15;
             if (myVariables.morning !== 'дощ'){
@@ -71,29 +64,25 @@ function roadCheckPoint2(myVariables) {
                     document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Чекати транспорт під дощем,... Що ж може бути краще :(`, '<br/>');
                 }
             }
-            resolve( myVariables);
+            callback(null, myVariables);
         },700);
-    })
 }
 //f5
-function myJob(myVariables) {
-    return new Promise((resolve) =>{
+function myJob(myVariables, callback) {
         setTimeout(()=>{
             myVariables.myTime += 20;
             if (myVariables.myTime < 480){
-                myVariables.myTime += 15;
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Залишилось трохи часу, можна з колегами потеривенити`, '<br/>');
+                myVariables.myTime += 15;
             }else {
-                myVariables.mood -= 15;
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Швидко потрібно перевірити всі системи...Головне нічого не пропустити... :(`, '<br/>');
+                myVariables.mood -= 15;
             }
-            resolve( myVariables);
+            callback(null, myVariables);
         },400);
-    })
 }
 //f6
-function startWorkDay(myVariables) {
-    return new Promise((resolve) =>{
+function startWorkDay(myVariables, callback) {
         setTimeout(()=>{
             if (myVariables.myTime>480){
                 myVariables.myTime += 10;
@@ -105,35 +94,29 @@ function startWorkDay(myVariables) {
                 myVariables.myTime += 15;
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Получити звіздюлей :)`, '<br/>');
             }
-            resolve( myVariables);
+            callback(null, myVariables);
         },800);
-    })
 }
 //f7
-function WorkDay(myVariables) {
-    return new Promise((resolve) =>{
+function WorkDay(myVariables, callback) {
         setTimeout(()=>{
             myVariables.myTime += 300;
             myVariables.mood += 20;
             document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Трохи попрацював...`, '<br/>');
-            resolve( myVariables);
+            callback(null, myVariables);
         },1500);
-    })
 }
 //f8
-function WorkTime(myVariables) {
-    return new Promise((resolve) =>{
+function WorkTime(myVariables, callback) {
         setTimeout(()=>{
             myVariables.myTime += 300;
             myVariables.mood += 20;
             document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Ще трохи попрацювати...`, '<br/>');
-            resolve( myVariables);
+            callback(null, myVariables);
         },1500);
-    })
 }
 //f9
-function lunch(myVariables) {
-    return new Promise((resolve) =>{
+function lunch(myVariables, callback) {
         setTimeout(()=>{
             if (myVariables.workContinue){
                 myVariables.myTime += 60;
@@ -144,55 +127,40 @@ function lunch(myVariables) {
                 myVariables.mood -= 25;
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Гррррррр :( Поїсти навіть не дадуть (((`, '<br/>');
             }
-            resolve( myVariables);
-        },1200);
-    })
+            callback(null, myVariables);
+        },800);
 }
 //f10
-function endWokDay(myVariables) {
-    return new Promise((resolve) =>{
+function endWokDay(myVariables, callback) {
         setTimeout(()=>{
             let endTime = 1440-myVariables.myTime +480;
             document.write(`${Math.floor(endTime/60)}:${endTime%60} - ще лишилось відпрацювати )`, '<br/>');
-            resolve( myVariables);
+            callback(null, myVariables);
         },800);
-    })
 }
-
 const myVariables = {dayOff:[true,false][Math.floor(Math.random() * 2)], myTime: Math.floor(Math.random() * (400 - 320)) + 320,mood : 50, morning : ['дощ', 'сонце', 'туман'][Math.floor(Math.random() * 3)],checkOnApp : [true,false][Math.floor(Math.random() * 2)],workContinue : [true,false][Math.floor(Math.random() * 2)]};
-prepareCoffee(myVariables)
-    .then(time =>{
-        return dressUp(time);
-    })
-    .then(time1 =>{
-        return waitForTrolleyBuss(time1);
-    })
-    .then(time2 =>{
-        return roadCheckPoint2(time2);
-    })
-    .then(time3 =>{
-        return myJob(time3);
-    })
-    .then(time4 =>{
-        return startWorkDay(time4);
-    })
-    .then(time5 =>{
-        return WorkDay(time5);
-    })
-
-    .then(time6 =>{
-        return lunch (time6);
-    })
-
-    .then(time7 =>{
-        return WorkTime(time7);
-    })
-
-    .then(time8 =>{
-        return endWokDay(time8);
-        })
-    .then(time9 =>{
-       document.write(`Ще один день минувся. Настрій ${time9.mood}/100`, '<br/>');
-    })
-    .catch(e=>{alert(e)})
-    .finally(()=>document.write('День за днем і місяць мине... А там вже і зарплата))) Мррр', '<br/>'));
+prepareCoffee(myVariables, (err1, res1)=>{
+    if (err1){
+        return document.write(err1);
+    }else {
+        dressUp(res1, (err2, res2)=>{
+            waitForTrolleyBuss(res2, (err3,res3)=>{
+                roadCheckPoint2(res3, (err4,res4)=>{
+                    myJob(res4, (err5,res5)=>{
+                        startWorkDay(res5, (err6,res6)=>{
+                            WorkDay(res6, (err7,res7)=>{
+                                lunch(res7, (err8,res8)=>{
+                                    WorkTime(res8, (err9,res9)=>{
+                                        endWokDay(res9, (err10,res10)=>{
+                                            document.write('День за днем і місяць мине... А там вже і зарплата))) Мррр', '<br/>')
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    }
+});

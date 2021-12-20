@@ -10,11 +10,11 @@ function prepareCoffee(myVariables) {
                     document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60} - Випити запашної кави зранку, поки всі сплять і така тишина навколо! Що може бути краще!?`, '<br/>');
                 }else {
                     myVariables.mood -= 5;
-                    document.write(`${Math.floor(myVariables.myTime/60)}+ ':'+ ${myVariables.myTime%60} - Проспав :((( . На роботі попю каву з колегами`, '<br/>');
+                    document.write(`${Math.floor(myVariables.myTime/60)}: ${myVariables.myTime%60} - Проспав :((( . На роботі попю каву з колегами`, '<br/>');
                 }
                 resolve(myVariables);
             }
-            reject('Та ну його... Виключаю телефон і лягаю спати....Хрррр');
+            reject('Та ну його...Сьогодні вихідний...  Виключаю телефон і лягаю спати....Хрррр');
         },1000);
     })
 }
@@ -28,7 +28,7 @@ function dressUp(myVariables) {
                 document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Сьогодні ${myVariables.morning}.Це Львів "Дєтка" - привикай до дощової погоди. Не забудь парасолю`, '<br/>');
             }else {
                 myVariables.mood += 10;
-                document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Сьогодні ${myVariables.morning}Погода "апупена". Можна скоротити дорогу і пройтись через парк`, '<br/>');
+                document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Сьогодні ${myVariables.morning}. Погода "апупена". Можна скоротити дорогу і пройтись через парк`, '<br/>');
             }
                 resolve( myVariables);
         },200);
@@ -45,7 +45,7 @@ function waitForTrolleyBuss(myVariables) {
             }else {
                 myVariables.myTime += 10;
                 myVariables.mood += 10;
-                document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Ладно, ще трохи пройдусь, може автобус приїде швидше`, '<br/>');
+                document.write(`${Math.floor(myVariables.myTime/60)}:${myVariables.myTime%60}. Тролейбус ще далеко... піду на іншу зупинку, може автобус приїде швидше`, '<br/>');
             }
                 resolve( myVariables);
         },1200);
@@ -159,8 +159,7 @@ function endWokDay(myVariables) {
     })
 }
 
-const myVariables = {dayOff:false, myTime: 340,mood : 50, morning : 'дощ',checkOnApp : true,workContinue : false};
-const setTime = myVariables.myTime;
+const myVariables = {dayOff:[true,false][Math.floor(Math.random() * 2)], myTime: Math.floor(Math.random() * (400 - 320)) + 320,mood : 50, morning : ['дощ', 'сонце', 'туман'][Math.floor(Math.random() * 3)],checkOnApp : [true,false][Math.floor(Math.random() * 2)],workContinue : [true,false][Math.floor(Math.random() * 2)]};
 
 async function myWorkDay() {
     try {
